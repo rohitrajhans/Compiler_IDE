@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #eee;
+    font-family: 'Muli', sans-serif;
+}
+
+.col, .row {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.main_container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+.left_div {
+    border-right: 15px solid #37474f;
+    height: 100%;
+    width: 50%;
+}
+
+.header, .header nav {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vh;
+
+    background: #eee;
+    color: black;
+}
+
+#dropdown-trigger:after {
+    padding-left: 4px;
+    color: #444;
+    content: ' ▾';
+ }
+
+.header .brand-logo {
+    font-size: 3vh;
+    padding-right: 2vw !important;
+}
+
+.header a {
+    font-size: 2vh;
+    color: black;
+}
+
+.dropdown-content {
+    top: 100% !important;
+}
+
+form {
+    height: 100%;
+}
+
+.form_code {
+    height: 70%;
+    margin-bottom: 5%;
+}
+.form_code > div, .form_code .CodeMirror {
+    height: 100%;
+}
+
+.form_input {
+    height: 12%;
+    margin-bottom: 5%;
+}
+
+.form_input > div{
+    height: 100%;
+    margin-left: 1vw !important; 
+}
+
+.form_input textarea {
+    height: 100% !important;
+    overflow: scroll;
+}
+
+.form_submit {
+    height: 7%;
+}
+
+.form_submit > div {
+    display: flex;
+    justify-content: center;
+}
+
+.right_div {
+    width: 50%;
+    background: white;
+}
+
+.right_div #output {
+    font-size: 2vh;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    color: red;
+    font-weight: 600; 
+}
+
+@media only screen and (max-width: 768px) {
+    .main_container {
+        flex-direction: column;
+    }
+
+    .left_div, .right_div {
+        width: 100%;
+    }
+
+    .left_div {
+        border: none;
+    }
+
+    .right_div {
+        min-height: 15vh;
+    }
+
+    .form_input {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form_input > div {
+        margin: 0;
+    }
+
+    #output {
+        padding: 2vh 1vw;
+    }
+}

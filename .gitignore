@@ -37,6 +37,8 @@ exe
 program
 compiler
 *.exe
+*main
+*.main
 *.out
 *.app
 *.i*86
