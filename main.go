@@ -17,6 +17,16 @@ type CodeStruct struct {
 	Input string `json:"input"`
 }
 
+func createCompilerBinaries() {
+	// creates the executable files for the compiler
+	cmd := exec.Command("make")
+	cmd.Dir = "./compiler"
+	err := cmd.Run()
+	if err != nil {
+		log.Fatalf("cmd.Run() failed with %s\n", err)
+	}
+}
+
 func execCompiler(code string, input string) string {
 
 	// fmt.Println(code)
@@ -221,10 +231,24 @@ func getData(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, string(resp))
 }
 
+func getPort() string {
+	p := os.Getenv("PORT")
+	if p != "" {
+	  return ":" + p
+	}
+	return ":3000"
+}
+
 func main() {
 
-	// create new router to handle requests
-	r := newRouter()
+	fmt.Println("Creating compiler Binaries")
+	// createCompilerBinaries()
 
-	log.Fatal(http.ListenAndServe(":8080", r))
+	// create new router to handle requests
+	fmt.Println("Creating router")
+	r := newRouter()
+	fmt.Println("Getting Port")
+	port := getPort()
+	fmt.Printf("Listening on %s\n", port)
+	log.Fatal(http.ListenAndServe(port, r))
 }

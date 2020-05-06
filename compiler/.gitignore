@@ -4,8 +4,6 @@
 .vscode/
 parsetreeOutFile.txt
 
-Procfile
-
 # Object files
 *.o
 *.ko
@@ -37,9 +35,8 @@ Procfile
 stage1exe
 exe
 program
+compiler
 *.exe
-*main
-*.main
 *.out
 *.app
 *.i*86
