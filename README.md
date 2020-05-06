@@ -2,7 +2,7 @@
 
 - Compiler built as part of the term project for the course **CS F363 - Compiler Construction**. 
 Original Github Repo to view development of compiler: [https://github.com/Saujas/Compiler-Project-CS-F363](https://github.com/Saujas/Compiler-Project-CS-F363)
-- Play around with the language at: bits-compiler.herokuapp.com
+- Play around with the language at: [https://bits-compiler.herokuapp.com/](https://bits-compiler.herokuapp.com/)
 - View language specifications here: [https://github.com/rohitrajhans/Compiler_IDE/blob/master/compiler/Language%20specifications.pdf](https://github.com/rohitrajhans/Compiler_IDE/blob/master/compiler/Language%20specifications.pdf)
 
 ## How to run
